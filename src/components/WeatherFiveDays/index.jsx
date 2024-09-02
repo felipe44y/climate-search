@@ -2,6 +2,7 @@ import "./styles.css";
 
 function WeatherFiveDays({ infoWeatherFiveDays }) {
   let dailyForecast = {};
+  console.log(`isso que tem dentro ${dailyForecast}`);
 
   for (let forecast of infoWeatherFiveDays.list) {
     const date = new Date(forecast.dt * 1000).toLocaleDateString();
@@ -12,7 +13,7 @@ function WeatherFiveDays({ infoWeatherFiveDays }) {
     }
   }
 
-  const nextFiveDays = Object.values(dailyForecast).slice(1, 6);
+  const nextFiveDays = Object.values(dailyForecast).slice(1, 5);
 
   console.log(nextFiveDays);
 
